@@ -6,7 +6,7 @@ set -e
 
 temp_file=$(mktemp)
 
-cjpeg -quality 72 -optimize "$file" > "$temp_file"
+cjpeg -quality 90 -progressive -optimize "$file" > "$temp_file"
 
 cp -f "$temp_file" "$file"
 
